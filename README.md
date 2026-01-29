@@ -48,9 +48,9 @@
 ### 13 - Explique as anotações @Id e @GeneratedValue.
     R - São usadas para identificar e gerar a chave primária de uma entidade.
 ### 14 - Analise o código:
-  public interface ProdutoRepository
-          extends JpaRepository<Produto, Long> {
-  }
+  public interface ProdutoRepository  
+          extends JpaRepository<Produto, Long> {  
+  }  
 ### Explique duas responsabilidades fornecidas por essa interface.
     R - Operações CRUD e Persistência de dados
 ### 15 - Porque evitamos escrever SQL manual ao usar JPA?
@@ -58,10 +58,10 @@
 ### 16 - O que é um DTO e qual problema ele resolve?
     R - Um objeto usado para transportar dados entre camadas de uma aplicação, sem conter a lógica de negócio.
 ### 17 - Analise o código abaixo:
-  @PostMapping
-  public Produto salvar(@RequestBody Produto produto) {
-      return repository.save(produto);
-  }
+  @PostMapping  
+  public Produto salvar(@RequestBody Produto produto) {  
+      return repository.save(produto);  
+  }  
 ### Explique por que essa abordagem não é recomendada.
     R - O Usuário passa diretamente um produto JPA para a camada de persistência, gerando acoplamento entre a API e o modelo de dados, o que torna a aplicação menos flexível.
     R - Qualquer alteração na entedidade pode quebrar a API.
@@ -82,13 +82,13 @@
                     }
                   } Serve apenas para realizar uma Notificação que um determinado produto foi cadastrado.
 ### 22 - Análise o código:
-  public class ProdutoController [
-    public void salvar () {
-      // validação
-      // regra de negócio
-      // acesso ao banco
-    }
-  }
+  public class ProdutoController [  
+    public void salvar () {  
+      // validação  
+      // regra de negócio  
+      // acesso ao banco  
+    }  
+  }  
 ###  Qual princípio SOLID está sendo violado?
     R - SRP (A classe tem múltiplas responsabilidades)
 ### 23 - Explique o Open/Closed Principle (OCP)
@@ -99,11 +99,11 @@
 ### 25 - Explique o Interface Segregation Principle (ISP)
     R - O uso de interfaces pequenas e específicas ao invez de uma grande e genérica, cada cliente deve depender apenas dos métodos que realmente precisa.
 ### 26 - Analise o código:
-  public interface ProdutoService {
-  salvar();
-  listar();
-  exportarPdf();
-  enviarEmail();
+  public interface ProdutoService {  
+  salvar();  
+  listar();  
+  exportarPdf();  
+  enviarEmail();  
 }
 ###  Qual princípio SOLID está sendo violado? Justifique.
     R - ISP (Uma interface grande e genérica onde mistura responsabilidades totalmente diferentes, forçando as classes(Cliente) a utilizar métodos que não usam.
