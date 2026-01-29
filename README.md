@@ -2,6 +2,8 @@
 <p align="center">Aluno: Deyvison Francisco Soares Silva</p>
 
 
+<h1 align="center">Parte 1 - Programação Orientada a Objetos(POO)</h1>
+
 ### 1-  Explique o que é Programação Orientada a Objetos e cite dois benefícios
          R - É um conceito de codificação onde transformamos Código em Objetos com atributos, por exemplo: Um Objeto/Classe Motocicleta onde seus atributos seriam: Cor, velocidade, marcha, freio. 
          R - Reuso do código e facilidade de manunteção.
@@ -21,6 +23,9 @@
       R - Para evitar que o usuário tenha acesso a dados sensíveis/privados.
 ### 5 - Qual alternativa representa corretamente um atributo encapsulado?
       R - Aquela em que o atributo está privado e o acesso a ele é por via de métodos públicos.
+
+<h1 align="center">Parte 2 - Spring Boot e REST </h1>
+      
 ### 6 - O que é Spring Boot e qual sua principal vantagem?
       R - É um framework que tem como objetivo simplificar e acelerar o desenvolvimento de aplicações Java.
       R - Sua principal vantagem acredito ser a Produtividade, o desenvolvedor pode focar na regra de negócio, escrever menos código e subir a aplicação rapidamente.
@@ -40,6 +45,9 @@
     R - POST: Insere informações no banco.
     R - PUT: Atualiza informações de algum item do banco.
     R - DELETE: Deleta informações do banco.
+
+<h1 align="center">Parte 3 - JPA e Hibernate</h1>
+    
 ### 11 - O que é JPA e qual o papel do Hibernate?
     R- JPA (Java Persistence API) Define como objetos Java devem ser persistidos em bancos de dados.
     R - Hibernate Implementa tudo que o JPA define, por exemplo: Geração de SQL, Persistência, Cache.
@@ -55,6 +63,9 @@
     R - Operações CRUD e Persistência de dados
 ### 15 - Porque evitamos escrever SQL manual ao usar JPA?
     R - o JPA permite trabalhar com objetos em vez de tabelas e colunas, o que diminui o risco de erros, por sintaxe, injeção, etc.
+
+<h1 align="center">Parte 4 - DTO e Service Layer</h1>
+    
 ### 16 - O que é um DTO e qual problema ele resolve?
     R - Um objeto usado para transportar dados entre camadas de uma aplicação, sem conter a lógica de negócio.
 ### 17 - Analise o código abaixo:
@@ -74,6 +85,9 @@
 ### 20 - Porque o Controller não deve acessar diretamente o Repository?
     R - Por motivos como: Boa arquitetura e manutenção da aplicação.
     R - por exemplo: Se o controller tiver acesso ao Repository, ele mistura responsabilidades, o que torna o código difícil de manter.
+
+<h1 align="center">Parte 5 - SOLID</h1>
+    
 ### 21 - Explique o Single Responsibility Principle (SRP) com um exemplo.
     R - SRP é o primeiro princípio do SOLID e diz que uma classe deve ter apenas uma razão para mudar, uma única responsabilidade.
     R - Exemplo: public class NotificacaoService {
@@ -111,6 +125,9 @@
     R - Código de alto nível não deve depender de implementações concretas como: detalhes de banco, serviços externos.
 ### 28 - Qual prática está alinha ao DIP?
     R - Uso de injeções de dependências por meio de abstrações.
+
+<h1 align="center">Parte 6 - Arquitetura</h1>
+    
 ### 29 - Explique o fluxo de uma requisição em uma API Spring Boot
     R - Requisição HTTP -> Controller -> Service -> Repository -> Controller
     R - Cliente faz requisição -> Controller recebe  a requisição -> Service aplica regras de negócio -> Repository persiste ou consulta os dados do banco -> Controller retorna resposta ao cliente.
